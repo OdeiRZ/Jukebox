@@ -1,0 +1,157 @@
+/*******************************Global**********************************/
+@font-face {
+    font-family:retro;
+    src:url('recursos/fonts/RetroLoops.ttf');
+}
+html {
+    font-family: retro;
+    background-image: url("recursos/img/textura-retro4.jpg");
+}
+audio {
+    position: absolute;
+    left: 98px;
+    padding-top: 230px;
+    width: 300px;
+    z-index: 1;
+}
+/*******************************general jukebox******************************/
+#jukebox {
+    position:relative;
+    margin: 20px auto 0px;
+    width:490px;
+    background: white;
+    border: 2px solid black;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    padding-bottom: 30px;
+    background-image: url("recursos/img/textura-madera.jpg");
+}
+#jukebox #led{
+    position: absolute;
+    width: 50px;
+    left:225px;
+    top:-7px;
+}
+/*******************************cristal jukebox******************************/
+#jukebox #cristal{
+    margin: 40px auto;
+    width:400px;
+    height: 400px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-image: url("recursos/img/textura-tela.jpg");
+}
+#jukebox #cristal img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin:28px 0 0 50px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    border: 3px solid black;
+    box-shadow: 0px 0px 46px 21px rgba(0,0,0,1);
+}
+#jukebox #cristal > span {
+    margin-left: 200px;
+    color: white;
+    font-weight: bold;
+}
+/*******************************select jukebox******************************/
+#jukebox #seleccion{
+    position: absolute;
+    margin: -240px auto 0px 43px;
+    padding: 20px;
+    width:364px;
+    height:50px;
+    background: white;
+    border-top: 2px solid black;
+    text-align: center;
+    background-image: url("recursos/img/textura-madera.jpg");
+}
+#jukebox #seleccion select {
+    width: 405px;
+    padding: 5px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: -20px;
+    text-align: center;
+    font-weight: bold;
+    background-image: url("recursos/img/textura-tela2.jpg");
+    font-family: retro;
+    color: white;
+}
+#jukebox #seleccion option {
+    padding: 5px;
+    cursor: pointer;
+    background-color: black;
+    text-align: center;
+}
+#jukebox #seleccion option:hover {
+    opacity: 0.9;
+}
+/*******************************botones jukebox******************************/
+#jukebox #botones{
+    background-image: url("recursos/img/textura-madera.jpg");
+    position: absolute;
+    margin: -160px auto 0px 48px;
+    width:404px;
+}
+#jukebox #botones a {
+    display: inline-block;
+    /*padding: 10px 20px;*/             /*windows*/
+    padding: 15px 20px 10px 20px;   /*ubuntu*/
+    width: 161px;
+    width:39%;
+    margin-top: -1px;
+    margin-left: -1px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: lightgray;
+    font-size: 14px;
+    font-weight: bold;
+    background-image: url("recursos/img/textura-boton.png");
+}
+#jukebox #botones a:hover {
+    background-image: url("recursos/img/textura-boton2.png");
+}
+#jukebox #botones a:target {
+    background-image: url("recursos/img/textura-boton3.png");
+}
+/*******************************pistas jukebox******************************/
+#pistas {
+    margin: -40px auto 10px auto;
+    width:490px;
+    background: white;
+    border:2px solid black;
+    border-top:2px solid transparent;
+    padding: 20px 0px 10px 0px;
+    background-image: url("recursos/img/textura-madera.jpg");
+}
+#pistas ul {
+    color: white;
+    margin-left: 45px;
+    padding:10px;
+    width:380px;
+    list-style-type: none;
+    border:2px solid black;
+    background-image: url("recursos/img/textura-tela2.jpg");
+}
+#pistas ul li:first-child {
+    text-align: center;
+    padding-bottom: 10px;
+}
+#pistas ul li:first-child:hover {
+    text-decoration: none;
+    cursor: default;
+}
+#pistas ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*******************************animaciones******************************/
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
