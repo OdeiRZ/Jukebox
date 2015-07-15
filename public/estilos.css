@@ -59,7 +59,7 @@ audio {
     font-weight: bold;
 }
 /*******************************select jukebox******************************/
-#jukebox #seleccion{
+#jukebox #seleccion {
     position: absolute;
     margin: -240px auto 0px 43px;
     padding: 20px;
@@ -100,7 +100,7 @@ audio {
 }
 #jukebox #botones a {
     display: inline-block;
-    /*padding: 10px 20px;*/             /*windows*/
+    /*padding: 10px 20px;*/         /*windows*/
     padding: 15px 20px 10px 20px;   /*ubuntu*/
     width: 161px;
     width:39%;

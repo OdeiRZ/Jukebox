@@ -25,4 +25,3 @@
     } catch (PDOException $e) {
         die('Ha ocurrido un *error* al acceder a la BBDD.');
     }
-?>
