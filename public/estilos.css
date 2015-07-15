@@ -1,11 +1,11 @@
 /*******************************Global**********************************/
 @font-face {
     font-family:retro;
-    src:url('recursos/fonts/RetroLoops.ttf');
+    src:url('resources/fonts/RetroLoops.ttf');
 }
 html {
     font-family: retro;
-    background-image: url("recursos/img/textura-retro4.jpg");
+    background-image: url("resources/img/textura-retro4.jpg");
 }
 audio {
     position: absolute;
@@ -24,7 +24,7 @@ audio {
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     padding-bottom: 30px;
-    background-image: url("recursos/img/textura-madera.jpg");
+    background-image: url("resources/img/textura-madera.jpg");
 }
 #jukebox #led{
     position: absolute;
@@ -40,7 +40,7 @@ audio {
     background: white;
     border: 2px solid black;
     border-radius: 50%;
-    background-image: url("recursos/img/textura-tela.jpg");
+    background-image: url("resources/img/textura-tela.jpg");
 }
 #jukebox #cristal img {
     border-radius: 50%;
@@ -68,7 +68,7 @@ audio {
     background: white;
     border-top: 2px solid black;
     text-align: center;
-    background-image: url("recursos/img/textura-madera.jpg");
+    background-image: url("resources/img/textura-madera.jpg");
 }
 #jukebox #seleccion select {
     width: 405px;
@@ -78,7 +78,7 @@ audio {
     margin-left: -20px;
     text-align: center;
     font-weight: bold;
-    background-image: url("recursos/img/textura-tela2.jpg");
+    background-image: url("resources/img/textura-tela2.jpg");
     font-family: retro;
     color: white;
 }
@@ -93,7 +93,7 @@ audio {
 }
 /*******************************botones jukebox******************************/
 #jukebox #botones{
-    background-image: url("recursos/img/textura-madera.jpg");
+    background-image: url("resources/img/textura-madera.jpg");
     position: absolute;
     margin: -160px auto 0px 48px;
     width:404px;
@@ -112,13 +112,13 @@ audio {
     color: lightgray;
     font-size: 14px;
     font-weight: bold;
-    background-image: url("recursos/img/textura-boton.png");
+    background-image: url("resources/img/textura-boton.png");
 }
 #jukebox #botones a:hover {
-    background-image: url("recursos/img/textura-boton2.png");
+    background-image: url("resources/img/textura-boton2.png");
 }
 #jukebox #botones a:target {
-    background-image: url("recursos/img/textura-boton3.png");
+    background-image: url("resources/img/textura-boton3.png");
 }
 /*******************************pistas jukebox******************************/
 #pistas {
@@ -128,7 +128,7 @@ audio {
     border:2px solid black;
     border-top:2px solid transparent;
     padding: 20px 0px 10px 0px;
-    background-image: url("recursos/img/textura-madera.jpg");
+    background-image: url("resources/img/textura-madera.jpg");
 }
 #pistas ul {
     color: white;
@@ -137,7 +137,7 @@ audio {
     width:380px;
     list-style-type: none;
     border:2px solid black;
-    background-image: url("recursos/img/textura-tela2.jpg");
+    background-image: url("resources/img/textura-tela2.jpg");
 }
 #pistas ul li:first-child {
     text-align: center;
