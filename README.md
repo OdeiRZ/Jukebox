@@ -26,10 +26,7 @@ y ejecutar el comando `vagrant up`. La aplicación será accesible desde la dire
 ## Licencia
 Esta aplicación se ofrece bajo licencia [AGPL versión 3].
 
-Autor: [Odei Riveiro Zafra], (c) 2015.
-
 [Vagrant]: https://www.vagrantup.com/
 [VirtualBox]: https://www.virtualbox.org
 [PDO]: http://php.net/manual/es/book.pdo.php
 [AGPL versión 3]: http://www.gnu.org/licenses/agpl.html
-[Odei Riveiro Zafra]: https://github.com/OdeiRZ
