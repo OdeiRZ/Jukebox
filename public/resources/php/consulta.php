@@ -21,7 +21,7 @@
             $pistas = $consulta -> fetchAll(PDO::FETCH_ASSOC);
             $json = json_encode($pistas);
         }
-        echo $json;     //vector devuelto en formato json(array asociativo)
+        echo $json;
     } catch (PDOException $e) {
-        die('Ha ocurrido un *error* al acceder a la BBDD.');
+        echo $json; //die('Ha ocurrido un *error* al acceder a la BBDD.');
     }

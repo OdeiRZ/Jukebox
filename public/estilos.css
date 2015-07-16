@@ -5,7 +5,7 @@
 }
 html {
     font-family: retro;
-    background-image: url("resources/img/textura-retro4.jpg");
+    background-image: url("resources/img/textura-retro.jpg");
 }
 audio {
     position: absolute;
@@ -47,11 +47,13 @@ audio {
     width: 300px;
     height: 300px;
     margin:28px 0 0 50px;
+    border: 3px solid black;
+    box-shadow: 0px 0px 46px 21px rgba(0,0,0,1);
+}
+#jukebox #cristal img.rotar {
     -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
-    border: 3px solid black;
-    box-shadow: 0px 0px 46px 21px rgba(0,0,0,1);
 }
 #jukebox #cristal > span {
     margin-left: 200px;

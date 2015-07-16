@@ -17,18 +17,22 @@ $(document).ready(function(){
                                     $.get('resources/php/consulta.php', { album: this.value }, function(pistasJson) {
                                         var indice = $('#seleccion select')[0].selectedIndex -1;
                                         var albumes = JSON.parse(albumesJson);
-                                        $("#cristal img:first").attr("src", 'resources/img/' + albumes[indice].portada + '.jpg');
+                                        $("#cristal img:first").attr("src", 'resources/img/' + albumes[indice].portada + '.jpg').removeClass("rotar");
                                         $("#cristal span:first").text(albumes[indice].nombre + ' (' + albumes[indice].anio + ') - ' + albumes[indice].artista).circleType({radius: 190});
                                         var ul = $("<ul />").append($('<li/>', { text: 'Traklist' }));
                                         $.each(JSON.parse(pistasJson), function(i, item) {
                                             $('<li/>', {
                                                 text: item.numero + '. ' + item.nombre, appendTo: ul,
                                                 click: function () {
-                                                    $("#led").attr('src','resources/img/led-on.gif');
                                                     $("audio").remove();
-                                                    $("<audio></audio>").attr({         //si no encuentra el mp3 o no lo reproduce se cambia la imagen
-                                                        'src': "resources/mp3/" + item.nombre + ".mp3", 'autoplay':'autoplay', 'controls': true
-                                                    }).prependTo("#jukebox").on({ error: function(){ $("#led").attr('src','resources/img/led-off.gif'); }
+                                                    $.ajax({url: "resources/mp3/" + item.nombre + ".mp3",
+                                                        success: function(data, textStatus) {
+                                                            $("<audio id='audio'></audio>").attr({ 'src': "resources/mp3/" + item.nombre + ".mp3", 'autoplay':'autoplay', 'controls': true }).prependTo("#jukebox");
+                                                            $('#audio').bind('play',  function() { reproducirCancion(); });
+                                                            $('#audio').bind('pause', function() { pararCancion(); });
+                                                        }, error: function(jqXHR, textStatus, errorThrown) {
+                                                            pararCancion();
+                                                        }
                                                     });
                                                 }
                                             });
@@ -50,4 +54,12 @@ $(document).ready(function(){
             });
         }
     });
+    function pararCancion() {
+        $("#led").attr('src','resources/img/led-off.gif');
+        $("#cristal img:first").removeClass("rotar");
+    }
+    function reproducirCancion() {
+        $("#led").attr('src','resources/img/led-on.gif');
+        $("#cristal img:first").addClass("rotar");
+    }
 });
