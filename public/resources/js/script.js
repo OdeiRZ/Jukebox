@@ -58,12 +58,12 @@ $(document).ready(function(){
     });
     function pararCancion(indice) {
         $("#led").attr('src','resources/img/led-off.gif');
-        $("#cristal img:first").removeClass("rotar");
+        $("#cristal img").removeClass("rotar");
         $('ul li').eq(indice).html($('ul li').eq(indice).text());
     }
     function reproducirCancion(indice) {
         $("#led").attr('src','resources/img/led-on.gif');
-        $("#cristal img:first").addClass("rotar");
+        $("#cristal img").addClass("rotar");
         $('ul li').eq(indice).html($('ul li').eq(indice).text() + " <img src='resources/img/music-bar.gif' rel='bars' />");
     }
 });
