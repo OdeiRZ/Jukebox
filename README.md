@@ -5,9 +5,9 @@ Aplicación web que simula el funcionamiento de una rockola, reproduciendo músi
 (aún en modo beta, no está lista para producción). Desplegada en fase de pruebas unicamente en 
 un equipo local.
 
-Desde ella se podrán reproducir canciones agrupadas por géneros, y álbumes, mostrando información perteneciente 
+Desde ella se podrán reproducir canciones agrupadas por géneros y álbumes, mostrando información perteneciente 
 a los mismos, tales como portadas, años de producción, números y nombres de pistas, nombres de artistas, etc., 
-añadiendo además efectos para una interación con el usuario más satisfactoria.
+añadiendo además efectos interactivos para una interación con el usuario más satisfactoria.
 
 Este proyecto utiliza PHP y su extensión [PDO], junto con algunas otras librerias en JavaScript que acompañan 
 el proyecto.
@@ -25,7 +25,8 @@ y ejecutar el comando `vagrant up`. La aplicación será accesible desde la dire
 
 ## Licencia
 Esta aplicación se ofrece bajo licencia [AGPL versión 3].
-Autor: [Odei Riveiro Zafra], (c) 2015
+
+Autor: [Odei Riveiro Zafra], (c) 2015.
 
 [Vagrant]: https://www.vagrantup.com/
 [VirtualBox]: https://www.virtualbox.org
