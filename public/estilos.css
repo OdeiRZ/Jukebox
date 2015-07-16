@@ -141,6 +141,9 @@ audio {
     border:2px solid black;
     background-image: url("resources/img/textura-tela2.jpg");
 }
+#pistas ul li {
+    margin: 5px 0px;
+}
 #pistas ul li:first-child {
     text-align: center;
     padding-bottom: 10px;

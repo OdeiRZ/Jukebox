@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $.get('resources/php/consulta.php', function(generosJson) {
-        if( generosJson === '*error*') {
+        if(generosJson === '*error*') {
             $('#jukebox #seleccion').css('min-height','225px').append('<img src="resources/img/fuera_de_servicio.png" />');
         } else {
             $.each(JSON.parse(generosJson), function(i, item) {
@@ -24,12 +24,14 @@ $(document).ready(function(){
                                             $('<li/>', {
                                                 text: item.numero + '. ' + item.nombre, appendTo: ul,
                                                 click: function () {
+                                                    $("ul li img").remove();
                                                     $("audio").remove();
+                                                    indice = $(this).index();
                                                     $.ajax({url: "resources/mp3/" + item.nombre + ".mp3",
                                                         success: function(data, textStatus) {
                                                             $("<audio id='audio'></audio>").attr({ 'src': "resources/mp3/" + item.nombre + ".mp3", 'autoplay':'autoplay', 'controls': true }).prependTo("#jukebox");
-                                                            $('#audio').bind('play',  function() { reproducirCancion(); });
-                                                            $('#audio').bind('pause', function() { pararCancion(); });
+                                                            $('#audio').bind('play',  function() { reproducirCancion(indice); });
+                                                            $('#audio').bind('pause', function() { pararCancion(indice); });
                                                         }, error: function(jqXHR, textStatus, errorThrown) {
                                                             pararCancion();
                                                         }
@@ -54,12 +56,14 @@ $(document).ready(function(){
             });
         }
     });
-    function pararCancion() {
+    function pararCancion(indice) {
         $("#led").attr('src','resources/img/led-off.gif');
         $("#cristal img:first").removeClass("rotar");
+        $('ul li').eq(indice).html($('ul li').eq(indice).text());
     }
-    function reproducirCancion() {
+    function reproducirCancion(indice) {
         $("#led").attr('src','resources/img/led-on.gif');
         $("#cristal img:first").addClass("rotar");
+        $('ul li').eq(indice).html($('ul li').eq(indice).text() + " <img src='resources/img/music-bar.gif' rel='bars' />");
     }
 });
