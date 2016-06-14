@@ -7,7 +7,7 @@ un equipo local.
 
 Desde ella se podrán reproducir canciones agrupadas por géneros y álbumes, mostrando información perteneciente 
 a los mismos, tales como portadas, años de producción, números y nombres de pistas, nombres de artistas, etc., 
-añadiendo además efectos interactivos para una interación con el usuario más satisfactoria.
+añadiendo además efectos interactivos para una interacción con el usuario más satisfactoria.
 
 Este proyecto utiliza PHP y su extensión [PDO], junto con algunas otras librerias en JavaScript que acompañan 
 el proyecto.
