@@ -1,4 +1,4 @@
-Jukebox 0.9
+Jukebox 0.91
 ================================
 
 Aplicación web que simula el funcionamiento de una rockola, reproduciendo música y elementos multimedia
