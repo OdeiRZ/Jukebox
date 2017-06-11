@@ -18,6 +18,7 @@ Para facilitar el desarrollo se proporciona un entorno [Vagrant] con todas las d
 - PHP 5.1 o superior
 - Servidor web Apache2 (podría funcionar con nginx, pero no se ha probado)
 - Cualquier sistema gestor de bases de datos (p.ej. MySQL, MariaDB, PosgreSQL, SQLite, etc.)
+- Navegador Web [Chrome], [Firefox], [Opera], [Microsoft Edge], etc..
 
 ## Entorno de desarrollo
 Para poder ejecutar la aplicación en un entorno de desarrollo basta con tener [Vagrant] instalado junto con [VirtualBox]
@@ -29,4 +30,8 @@ Esta aplicación se ofrece bajo licencia [GPL versión 3].
 [Vagrant]: https://www.vagrantup.com/
 [VirtualBox]: https://www.virtualbox.org
 [PDO]: http://php.net/manual/es/book.pdo.php
+[Chrome]: https://www.google.es/chrome/browser/desktop/index.html
+[Firefox]: https://www.mozilla.org/es-ES/firefox/new/
+[Opera]: http://www.opera.com/es
+[Microsoft Edge]: https://www.microsoft.com/es-es/windows/microsoft-edge
 [GPL versión 3]: https://www.gnu.org/licenses/gpl-3.0.en.html
