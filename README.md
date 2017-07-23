@@ -18,7 +18,7 @@ Para facilitar el desarrollo se proporciona un entorno [Vagrant] con todas las d
 - PHP 5.1 o superior
 - Servidor web Apache2 (podría funcionar con nginx, pero no se ha probado)
 - Cualquier sistema gestor de bases de datos (p.ej. MySQL, MariaDB, PosgreSQL, SQLite, etc.)
-- Navegador Web [Chrome], [Firefox], [Opera], [Microsoft Edge], etc..
+- Navegador web [Chrome], [Firefox], [Opera], [Microsoft Edge], etc..
 
 ## Entorno de desarrollo
 Para poder ejecutar la aplicación en un entorno de desarrollo basta con tener [Vagrant] instalado junto con [VirtualBox]
